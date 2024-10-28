@@ -2,7 +2,11 @@ import type { Principal } from '@dfinity/principal';
 import type { ActorMethod } from '@dfinity/agent';
 import type { IDL } from '@dfinity/candid';
 
-export interface Testimonial { 'content' : string, 'author' : string }
+export interface Testimonial {
+  'title' : string,
+  'content' : string,
+  'author' : string,
+}
 export interface _SERVICE {
   'getTestimonials' : ActorMethod<[], Array<Testimonial>>,
   'submitContactForm' : ActorMethod<[string, string, string], undefined>,

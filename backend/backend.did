@@ -2,6 +2,7 @@ type Testimonial =
  record {
    author: text;
    content: text;
+   title: text;
  };
 service : {
   getTestimonials: () -> (vec Testimonial) query;

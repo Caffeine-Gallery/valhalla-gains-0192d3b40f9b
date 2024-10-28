@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         try {
             await backend.submitContactForm(name, email, message);
-            alert('Thank you for your message. We will get back to you soon!');
+            alert('Your battle cry has been heard! We shall respond soon, warrior!');
             contactForm.reset();
         } catch (error) {
             console.error('Error submitting contact form:', error);
-            alert('There was an error submitting your message. Please try again later.');
+            alert('By Odin\'s beard! There was an error sending your message. Please try again later.');
         } finally {
             loadingSpinner.style.display = 'none';
         }
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <div class="card">
                                 <div class="card-body">
                                     <p class="card-text">"${testimonial.content}"</p>
-                                    <p class="card-text"><small class="text-muted">- ${testimonial.author}</small></p>
+                                    <p class="card-text"><small class="text-muted">- ${testimonial.author}, ${testimonial.title}</small></p>
                                 </div>
                             </div>
                         </div>
