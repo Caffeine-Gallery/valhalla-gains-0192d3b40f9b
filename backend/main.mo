@@ -11,41 +11,33 @@ actor {
 
     stable var testimonials: [Testimonial] = [
         { 
-            author = "Bjorn Ironside";
-            title = "Berserker Trainee";
-            content = "Viking Fitness forged me into an unstoppable force! The axe throwing class honed my battle skills to perfection!"
+            author = "John D.";
+            title = "Fitness Enthusiast";
+            content = "Viking Fitness has completely transformed my physique. The trainers are top-notch and the atmosphere is motivating!"
         },
         { 
-            author = "Lagertha Shieldmaiden";
-            title = "Shield Wall Champion";
-            content = "The shield wall workout pushed me beyond my limits. Now, I feel invincible on the battlefield!"
+            author = "Sarah M.";
+            title = "Marathon Runner";
+            content = "The cardio classes at Viking Fitness have significantly improved my endurance. I've shaved minutes off my marathon time!"
         },
         { 
-            author = "Ragnar Lothbrok";
-            title = "Longship Captain";
-            content = "The longship rowing machines prepared me for conquering new lands. My endurance is unmatched thanks to Viking Fitness!"
+            author = "Mike R.";
+            title = "Strength Training Addict";
+            content = "I've never felt stronger! The strength training programs at Viking Fitness are challenging and effective."
         },
         {
-            author = "Astrid the Valkyrie";
-            title = "Warrior's Path Graduate";
-            content = "Viking Fitness turned me into a true Valkyrie. The intensity of their training is unparalleled!"
+            author = "Emily L.";
+            title = "Yoga Practitioner";
+            content = "The yoga classes at Viking Fitness provide the perfect balance to my high-intensity workouts. I feel more flexible and centered."
         },
         {
-            author = "Ivar the Boneless";
-            title = "Master Strategist";
-            content = "Despite my physical limitations, Viking Fitness helped me become a formidable warrior. Their adaptive training is second to none!"
+            author = "David K.";
+            title = "Weight Loss Success Story";
+            content = "I've lost 50 pounds since joining Viking Fitness. The supportive community and expert guidance have been crucial to my success."
         }
     ];
 
     public query func getTestimonials() : async [Testimonial] {
         testimonials
-    };
-
-    public func submitContactForm(name: Text, email: Text, message: Text) : async () {
-        Debug.print("New battle cry received:");
-        Debug.print("Warrior's Name: " # name);
-        Debug.print("Raven's Path (Email): " # email);
-        Debug.print("Battle Cry: " # message);
-        // In a real-world scenario, you would store this information or send it to an email service
     };
 }

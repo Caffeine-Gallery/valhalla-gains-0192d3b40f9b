@@ -6,5 +6,4 @@ type Testimonial =
  };
 service : {
   getTestimonials: () -> (vec Testimonial) query;
-  submitContactForm: (text, text, text) -> ();
 }

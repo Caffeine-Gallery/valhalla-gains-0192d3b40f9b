@@ -1,17 +1,17 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f8f9fa;
     color: #333;
 }
 
 .navbar {
-    background-color: #1a1a1a !important;
+    background-color: #343a40 !important;
 }
 
 .navbar-brand {
     font-weight: bold;
     font-size: 1.5rem;
-    color: #ffd700 !important;
+    color: #ffffff !important;
 }
 
 .nav-link {
@@ -20,7 +20,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #ffd700 !important;
+    color: #17a2b8 !important;
 }
 
 .hero {
@@ -62,14 +62,14 @@ body {
 }
 
 .btn-primary {
-    background-color: #cc0000;
-    border-color: #cc0000;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
     font-weight: bold;
 }
 
 .btn-primary:hover {
-    background-color: #990000;
-    border-color: #990000;
+    background-color: #138496;
+    border-color: #138496;
 }
 
 .card {
@@ -83,21 +83,23 @@ body {
 }
 
 .card-title {
-    color: #cc0000;
+    color: #17a2b8;
     font-weight: bold;
 }
 
-#loadingSpinner {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
+h2 {
+    color: #343a40;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
-footer {
-    background-color: #1a1a1a !important;
-    color: #ffd700 !important;
+.social-links a {
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #17a2b8 !important;
 }
 
 @media (max-width: 768px) {
@@ -108,43 +110,4 @@ footer {
     .hero p {
         font-size: 1.2rem;
     }
-}
-
-/* Viking-inspired decorative elements */
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, #cc0000, #ffd700);
-}
-
-h2 {
-    position: relative;
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-    color: #cc0000;
-    font-weight: bold;
-}
-
-h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background: linear-gradient(90deg, #cc0000, #ffd700);
-}
-
-.form-control {
-    border: 2px solid #cc0000;
-}
-
-.form-control:focus {
-    border-color: #ffd700;
-    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
 }

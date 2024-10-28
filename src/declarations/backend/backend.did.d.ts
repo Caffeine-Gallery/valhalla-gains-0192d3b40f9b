@@ -9,7 +9,6 @@ export interface Testimonial {
 }
 export interface _SERVICE {
   'getTestimonials' : ActorMethod<[], Array<Testimonial>>,
-  'submitContactForm' : ActorMethod<[string, string, string], undefined>,
 }
 export declare const idlFactory: IDL.InterfaceFactory;
 export declare const init: (args: { IDL: typeof IDL }) => IDL.Type[];

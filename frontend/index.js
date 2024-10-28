@@ -2,8 +2,7 @@ import { backend } from 'declarations/backend';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const testimonialCarousel = document.querySelector('#testimonialCarousel .carousel-inner');
-    const contactForm = document.getElementById('contactForm');
-    const loadingSpinner = document.getElementById('loadingSpinner');
+    const instagramFeedContainer = document.getElementById('instagram-feed-container');
 
     // Fetch and display testimonials
     try {
@@ -13,26 +12,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Error fetching testimonials:', error);
     }
 
-    // Handle contact form submission
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        loadingSpinner.style.display = 'block';
-
-        try {
-            await backend.submitContactForm(name, email, message);
-            alert('Your battle cry has been heard! We shall respond soon, warrior!');
-            contactForm.reset();
-        } catch (error) {
-            console.error('Error submitting contact form:', error);
-            alert('By Odin\'s beard! There was an error sending your message. Please try again later.');
-        } finally {
-            loadingSpinner.style.display = 'none';
-        }
-    });
+    // Fetch and display Instagram feed
+    fetchInstagramFeed();
 
     function displayTestimonials(testimonials) {
         testimonials.forEach((testimonial, index) => {
@@ -51,6 +32,30 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
             `;
             testimonialCarousel.innerHTML += testimonialHTML;
+        });
+    }
+
+    function fetchInstagramFeed() {
+        // Replace this with actual Instagram API call or embed code
+        const dummyPosts = [
+            { imageUrl: 'https://picsum.photos/300/300?random=1', caption: 'Intense workout session!' },
+            { imageUrl: 'https://picsum.photos/300/300?random=2', caption: 'New equipment arrived!' },
+            { imageUrl: 'https://picsum.photos/300/300?random=3', caption: 'Join our next fitness challenge!' },
+            { imageUrl: 'https://picsum.photos/300/300?random=4', caption: 'Meal prep tips for fitness enthusiasts' }
+        ];
+
+        dummyPosts.forEach(post => {
+            const postHTML = `
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="${post.imageUrl}" class="card-img-top" alt="Instagram post">
+                        <div class="card-body">
+                            <p class="card-text">${post.caption}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            instagramFeedContainer.innerHTML += postHTML;
         });
     }
 });
