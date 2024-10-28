@@ -1,0 +1,9 @@
+type Testimonial = 
+ record {
+   author: text;
+   content: text;
+ };
+service : {
+  getTestimonials: () -> (vec Testimonial) query;
+  submitContactForm: (text, text, text) -> ();
+}
